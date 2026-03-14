@@ -13,7 +13,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KazPunct — Kazakh Punctuation Restoration | GirlyGirl",
+  title: "KazPunct - Kazakh Punctuation Restoration | GirlyGirl",
   description:
     "AI-powered punctuation restoration for Kazakh language. Built by team GirlyGirl at Freedom Labs Hackathon.",
 };
