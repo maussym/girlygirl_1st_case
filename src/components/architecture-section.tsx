@@ -19,15 +19,15 @@ export function ArchitectureSection() {
   const { lang } = useLang();
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 lg:px-16 py-20 dot-grid">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-12 sm:py-20 dot-grid">
       <FadeIn>
         <SectionTag num="006" label={t("archTitle", lang)} />
       </FadeIn>
 
-      <div className="grid md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
         {ARCH_ITEMS.map((item, idx) => (
           <FadeIn key={item.titleKey} delay={idx * 80}>
-            <div className="group rounded-xl border border-gray-100 bg-white p-6 hover:border-fd-green/30 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300 hover:-translate-y-1 h-full">
+            <div className="group rounded-xl border border-gray-100 bg-white p-4 sm:p-6 hover:border-fd-green/30 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300 hover:-translate-y-1 h-full">
               <div className="w-10 h-10 rounded-lg bg-fd-green-light flex items-center justify-center text-fd-green mb-4 group-hover:bg-fd-green group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>

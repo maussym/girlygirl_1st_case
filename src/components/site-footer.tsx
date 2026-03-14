@@ -8,7 +8,7 @@ export function SiteFooter() {
   const { lang } = useLang();
 
   return (
-    <footer className="border-t border-gray-100 px-6 md:px-16 py-8 mt-8">
+    <footer className="border-t border-gray-100 px-4 sm:px-6 md:px-16 py-6 sm:py-8 mt-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <Image src="/freedom_labs.png" alt="Freedom Labs" width={100} height={25} />

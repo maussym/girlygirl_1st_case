@@ -18,15 +18,15 @@ export function LabelsSection() {
   const { lang } = useLang();
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 lg:px-16 py-20">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-12 sm:py-20">
       <FadeIn>
         <SectionTag num="003" label={t("labelsTitle", lang)} />
       </FadeIn>
 
-      <div className="grid md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
         {ITEMS.map((item, idx) => (
           <FadeIn key={item.label} delay={idx * 80}>
-            <div className="group rounded-xl border border-gray-100 bg-white p-6 text-center hover:border-fd-green/30 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300 hover:-translate-y-1">
+            <div className="group rounded-xl border border-gray-100 bg-white p-4 sm:p-6 text-center hover:border-fd-green/30 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300 hover:-translate-y-1">
               <Badge
                 variant="outline"
                 className={`text-[11px] font-mono mb-4 rounded-md transition-transform group-hover:scale-110 ${LABEL_COLORS[item.label]}`}

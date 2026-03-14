@@ -68,13 +68,13 @@ export function DemoSection() {
   };
 
   return (
-    <section id="demo" className="relative mx-auto w-full max-w-7xl px-6 lg:px-16 py-20">
+    <section id="demo" className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-12 sm:py-20">
       <FadeIn>
         <SectionTag num="001" label={t("demoTitle", lang)} />
       </FadeIn>
 
       <FadeIn delay={100}>
-        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
+        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm p-4 sm:p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-2">
               <Code2 className="w-4 h-4 text-fd-green" />

@@ -14,13 +14,13 @@ export function EvalSection() {
   const { lang } = useLang();
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 lg:px-16 py-20">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-12 sm:py-20">
       <FadeIn>
         <SectionTag num="005" label={t("evalTitle", lang)} />
       </FadeIn>
 
       <FadeIn delay={100}>
-        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm p-6 md:p-8">
+        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm p-4 sm:p-6 md:p-8">
           <div className="flex items-center gap-1.5 mb-5">
             <div className="w-3 h-3 rounded-full bg-red-400" />
             <div className="w-3 h-3 rounded-full bg-yellow-400" />
@@ -32,7 +32,7 @@ export function EvalSection() {
 
           <p className="text-sm text-gray-500 mb-5 leading-relaxed">{t("evalDesc", lang)}</p>
 
-          <div className="code-block rounded-lg p-5 border border-gray-100 font-mono text-[12px] text-fd-green">
+          <div className="code-block rounded-lg p-3 sm:p-5 border border-gray-100 font-mono text-[11px] sm:text-[12px] text-fd-green overflow-x-auto">
             <pre>{CODE}</pre>
           </div>
         </div>
