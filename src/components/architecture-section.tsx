@@ -8,11 +8,11 @@ import { t } from "@/lib/i18n";
 
 const ARCH_ITEMS = [
   { icon: <Cpu className="w-5 h-5" />, titleKey: "archModel", descKey: "archModelDesc" },
-  { icon: <Layers className="w-5 h-5" />, titleKey: "archTokenizer", descKey: "archTokenizerDesc" },
+  { icon: <Layers className="w-5 h-5" />, titleKey: "archCrf", descKey: "archCrfDesc" },
   { icon: <Database className="w-5 h-5" />, titleKey: "archData", descKey: "archDataDesc" },
-  { icon: <Workflow className="w-5 h-5" />, titleKey: "archPipeline", descKey: "archPipelineDesc" },
   { icon: <Settings className="w-5 h-5" />, titleKey: "archTraining", descKey: "archTrainingDesc" },
   { icon: <Zap className="w-5 h-5" />, titleKey: "archInference", descKey: "archInferenceDesc" },
+  { icon: <Workflow className="w-5 h-5" />, titleKey: "archPipeline", descKey: "archPipelineDesc" },
 ] as const;
 
 export function ArchitectureSection() {

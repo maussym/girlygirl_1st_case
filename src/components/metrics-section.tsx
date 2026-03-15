@@ -7,9 +7,9 @@ import { useLang } from "@/context/lang-context";
 import { t } from "@/lib/i18n";
 
 const METRICS = [
-  { label: "COMMA F1", value: "\u2014", key: "metricsComma" },
-  { label: "PERIOD F1", value: "\u2014", key: "metricsPeriod" },
-  { label: "QUESTION F1", value: "\u2014", key: "metricsQuestion" },
+  { label: "COMMA F1", value: "0.792", key: "metricsComma" },
+  { label: "PERIOD F1", value: "0.896", key: "metricsPeriod" },
+  { label: "QUESTION F1", value: "0.846", key: "metricsQuestion" },
 ] as const;
 
 export function MetricsSection() {
@@ -35,9 +35,22 @@ export function MetricsSection() {
           </FadeIn>
         ))}
       </div>
-      <p className="text-center text-gray-300 text-[11px] mt-6 tracking-wider font-mono">
-        {t("metricsNote", lang)}
-      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-5">
+        <FadeIn delay={300}>
+          <div className="group rounded-xl border border-fd-green/20 bg-fd-green-light/30 p-4 sm:p-6 text-center hover:border-fd-green/40 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300">
+            <p className="text-3xl sm:text-4xl font-extrabold text-fd-green mb-1">0.845</p>
+            <p className="text-xs text-gray-500 font-bold tracking-wider font-mono">MACRO F1</p>
+            <p className="text-[11px] text-gray-400 mt-1">{t("metricsMacro", lang)}</p>
+          </div>
+        </FadeIn>
+        <FadeIn delay={400}>
+          <div className="group rounded-xl border border-fd-green/20 bg-fd-green-light/30 p-4 sm:p-6 text-center hover:border-fd-green/40 hover:shadow-lg hover:shadow-fd-green/5 transition-all duration-300">
+            <p className="text-3xl sm:text-4xl font-extrabold text-fd-green mb-1">0.85</p>
+            <p className="text-xs text-gray-500 font-bold tracking-wider font-mono">KAGGLE LB</p>
+            <p className="text-[11px] text-gray-400 mt-1">{t("metricsKaggle", lang)}</p>
+          </div>
+        </FadeIn>
+      </div>
     </section>
   );
 }

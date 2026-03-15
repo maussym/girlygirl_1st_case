@@ -29,14 +29,15 @@ export function DemoSection() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/predict", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${apiUrl}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: inputText.trim() }),
       });
       if (!res.ok) throw new Error("Prediction failed");
       const data = await res.json();
-      setResult({ labels: data.labels, words: inputText.trim().split(/\s+/) });
+      setResult({ labels: data.labels.join(" "), words: data.words });
     } catch {
       setError(t("demoError", lang));
       const words = inputText.trim().split(/\s+/);
